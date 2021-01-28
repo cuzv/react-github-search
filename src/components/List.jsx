@@ -30,12 +30,14 @@ export default class List extends Component {
           error ? <h1 style={{color: 'red'}}>{error.message}</h1> :
           0 === users.length ? <h1>Ther is no result.</h1> :
           users.map(user => {
-            <div className="card" key={user.id}>
-              <a href={user.html_url} target="_blank" ref="noreferrer">
-                <img src={user.avatar_url} style={{width: '100px'}}/>
-              </a>
-              <p className="card-text">{user.login}</p>
-            </div>
+            return (
+              <div className="card" key={user.id}>
+                <a href={user.html_url} target="_blank" ref="noreferrer">
+                  <img src={user.avatar_url} style={{width: '100px'}}/>
+                </a>
+                <p className="card-text">{user.login}</p>
+              </div>
+            )
           })
         }        
       </div>
