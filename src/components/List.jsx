@@ -32,8 +32,8 @@ export default class List extends Component {
           users.map(user => {
             return (
               <div className="card" key={user.id}>
-                <a href={user.html_url} target="_blank" ref="noreferrer">
-                  <img src={user.avatar_url} style={{width: '100px'}}/>
+                <a href={user.html_url} target="_blank" rel="noreferrer">
+                  <img src={user.avatar_url} style={{width: '100px'}} alt="user avatar"/>
                 </a>
                 <p className="card-text">{user.login}</p>
               </div>
